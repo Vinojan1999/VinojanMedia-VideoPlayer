@@ -24,11 +24,11 @@ const Feed = () => {
         />
 
         <Typography className='copyright' variant='body2' sx={{ mt: 2, color: '#fff'}}>
-          © Copyright 2023, Vinojan Media.
+          © Copyright 2023, Vinojan Media
         </Typography>
       </Box>
 
-      <Box p={4} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
+      <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2 }}>
         <Typography variant='h4' fontWeight='bold' mb={2} sx={{ color: 'white' }}>
           {selectedCategory} <span style={{ color: '#2F80ED'}}>videos</span>
         </Typography>
