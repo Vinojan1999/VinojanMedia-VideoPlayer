@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 
 import { Videos, ChannelCard } from './';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
+import { fetchFromGoogleAPI } from '../utils/fetchFromGoogleAPI';
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null);
@@ -12,10 +13,10 @@ const ChannelDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetchFromAPI(`channels?part=snippet&id=${id}`)
+    fetchFromGoogleAPI(`channels?part=snippet&id=${id}`)
       .then((data) => setChannelDetail(data?.items[0]));
 
-    fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`)
+      fetchFromGoogleAPI(`search?channelId=${id}&part=snippet&order=date`)
       .then((data) => setVideos(data?.items));
   }, [id])
   

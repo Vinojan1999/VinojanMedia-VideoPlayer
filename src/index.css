@@ -38,6 +38,7 @@ a {
   height: 72vh !important;
   width: 100% !important;
   border-radius: 20px;
+  z-index: 1000;
 }
 
 .logo-desktop {
